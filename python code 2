@@ -1,0 +1,14 @@
+if __name__ == "__main__":
+    private_key, public_key = generate_rsa_key_pair()
+    private_pem, public_pem = serialize_keys(private_key, public_key)
+    kid, expiry = generate_kid_and_expiry()
+
+    # Print or save the keys, kid, and expiry as needed
+    print("Private Key (PEM format):")
+    print(private_pem.decode())
+
+    print("\nPublic Key (PEM format):")
+    print(public_pem.decode())
+
+    print("\nKey ID (kid):", kid)
+    print("Expiry Timestamp:", expiry)

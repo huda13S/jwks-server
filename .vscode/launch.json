@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Arduino",
+            "type": "arduino",
+            "request": "upload",
+            "program": "${workspaceFolder}/src/your_sketch.ino",
+            "port": "COMx", // Replace 'COMx' with your Arduino's port
+            "board": "arduino:avr:uno", // Replace with your Arduino board type
+            "preLaunchTask": "Build",
+            "showOutput": "always",
+            "debuggerExtension": true,
+            "args": [
+                "--preserve-temp-files",
+                "--verbose"
+            ]
+        }
+    ]
+}
